@@ -1,5 +1,6 @@
 <?php require_once "../conexao/ConexaoPDO.php"; ?>
 <h1>Manutenção de faixas</h1>
+<a href="../index.php"> Voltar</a>
 <hr>
 <h2>Nova faixa</h2>
 <form action="inserirFaixa.php" method="POST">
@@ -27,7 +28,9 @@ foreach($faixas as $registro=>$faixa){
 <tr>
     <td> <?php echo $faixa["id"]; ?> </td>
     <td> <?php echo $faixa["cor"]; ?> </td>
-    <td><a href="excluirFaixa.php?id=<?php echo $faixa["id"]; ?>" >Excluir</a></td><!-- (* cada linha da tabela vai possuir a opção de excluir o registro pelo id) -->
+    <td><a href="excluirFaixa.php?id=<?php echo $faixa["id"]; ?>" >Excluir</a>
+    <a href="frmEditarFaixa.php?id=<?php echo $faixa["id"]; ?>" >Editar</a>
+</td><!-- (* cada linha da tabela vai possuir a opção de excluir o registro pelo id) -->
 </tr>
 <?php } ?>
 
