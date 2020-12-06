@@ -8,6 +8,9 @@
 <input type="submit" value="Cadastrar Faixa" />
 </form>
 <HR>
+   <hr>
+<a href="filtrarFaixa.php">Deseja filtrar a lista</a>
+<hr>
 <?php 
 $conexao = ConexaoPDO::getInstance();
 $query = "SELECT * FROM faixas";
